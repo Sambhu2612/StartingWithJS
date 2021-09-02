@@ -1,13 +1,16 @@
-console.log("Hey this is my first piece of javascript code !!!");
+// Data types
 
-console.log(8762347625462);
+// Primitive and Non primitive
 
-console.log({name : "Piyush"})
+let age = 7676376;
+let Name = 'asjjhfjhdf';
 
-console.log(false, 8723648726, 'string', {name : "Piyush"})
+let brand;
+console.log(brand);
 
-console.log("Piyush"*1000)
-
-console.warn("I am giving you warning")
-
-console.error("You are gone")
+let arr = [1,0,3,4]
+arr.sort()
+arr.push("value")
+arr.unshift(false)
+console.log(typeof arr)
+console.log(arr)
