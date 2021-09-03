@@ -1,19 +1,29 @@
-// Comparision operators
+// Logical operators
 
-var a = 21;
-var b = 7;
-var c = 21;
+const a = 10
+const b = 50
 
-console.log(a > b);
-console.log(a < b);
-console.log(a == b);
-console.log(a == c);
-console.log(a >b< c);
+const c = 35
 
+console.log(c > a && c < b)
 
-console.log("----------------------------------");
+console.log('a == b', a == b)
+console.log('a != b', a != b)
+console.log('')
 
-a = 11;
-b = '11';
-console.log(a == b);
-console.log(a === b);
+console.log('Truth table for AND')
+console.log('')
+
+console.log('false && false', false && false)
+console.log('true && true', true && true)
+console.log('true && false', true && false)
+console.log('false && true', false && true)
+console.log('')
+
+console.log('Truth table for OR')
+console.log('')
+
+console.log('false|| false', false || false)
+console.log('true|| true', true || true)
+console.log('true|| false', true || false)
+console.log('false|| true', false || true)
