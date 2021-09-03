@@ -1,9 +1,19 @@
-// Assignments operators
+// Comparision operators
 
-let Name = "Piyush";
+var a = 21;
+var b = 7;
+var c = 21;
 
-let a = 10;
+console.log(a > b);
+console.log(a < b);
+console.log(a == b);
+console.log(a == c);
+console.log(a >b< c);
 
-a += Name;
-a /= 7;
-console.log(a);
+
+console.log("----------------------------------");
+
+a = 11;
+b = '11';
+console.log(a == b);
+console.log(a === b);
