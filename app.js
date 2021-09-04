@@ -1,29 +1,9 @@
-// Logical operators
+const element = document.getElementById("selectme");
 
-const a = 10
-const b = 50
+const div = document.getElementsByTagName("div");
 
-const c = 35
+const headings = document.getElementsByClassName("heading");
 
-console.log(c > a && c < b)
+const query = document.querySelectorAll('h3.heading')
 
-console.log('a == b', a == b)
-console.log('a != b', a != b)
-console.log('')
-
-console.log('Truth table for AND')
-console.log('')
-
-console.log('false && false', false && false)
-console.log('true && true', true && true)
-console.log('true && false', true && false)
-console.log('false && true', false && true)
-console.log('')
-
-console.log('Truth table for OR')
-console.log('')
-
-console.log('false|| false', false || false)
-console.log('true|| true', true || true)
-console.log('true|| false', true || false)
-console.log('false|| true', false || true)
+console.log(query);
