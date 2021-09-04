@@ -1,9 +1,13 @@
-const element = document.getElementById("selectme");
+const element = document.querySelector("#selectme");
+element.innerHTML = "This is from js";
+element.classList.add('selector')
+console.log(element.classList);
+element.classList.remove('selector');
+console.log(element.classList);
 
-const div = document.getElementsByTagName("div");
+element.style.color = "blue";
 
-const headings = document.getElementsByClassName("heading");
+const body = document.querySelector('body');
+console.log(body.classList.toggle('dark'));
 
-const query = document.querySelectorAll('h3.heading')
-
-console.log(query);
+console.log(document.querySelector('body').classList.contains('dark'));
