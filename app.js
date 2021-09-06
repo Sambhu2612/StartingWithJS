@@ -1,12 +1,16 @@
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissor = document.querySelector("#scissor");
+// const rock = document.querySelector('#rock')
+// const paper = document.querySelector('#paper')
+// const scissor = document.querySelector('#scissor')
 
-console.log(rock);
-console.log(paper);
-console.log(scissor);
 
-function logName(name="Enter your name"){
-    return(name);
+function logName(Name = "John Doe", age = 18) {
+    // console.log("Nishta")
+    console.log(Name + " You are " + age)
 }
-console.log(logName())
+
+const add = (a = 0, b = 0) => {
+    return a + b
+}
+
+
+console.log(add(12, 23))
