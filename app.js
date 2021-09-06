@@ -1,16 +1,11 @@
-// Data types
+console.log("This is a javascript bootcamp");
+console.warn("This is a warning");
+console.error("This is an error");
 
-// Primitive and Non primitive
+console.log(typeof -123.6);
 
-let age = 7676376;
-let Name = 'asjjhfjhdf';
+console.log(typeof ['Hi',12]);
 
-let brand;
-console.log(brand);
+let arr = ["john", "Doe"];
 
-let arr = [1,0,3,4]
-arr.sort()
-arr.push("value")
-arr.unshift(false)
-console.log(typeof arr)
-console.log(arr)
+console.log(age);
