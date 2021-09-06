@@ -1,16 +1,12 @@
-// Data types
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissor = document.querySelector("#scissor");
 
-// Primitive and Non primitive
+console.log(rock);
+console.log(paper);
+console.log(scissor);
 
-let age = 7676376;
-let Name = 'asjjhfjhdf';
-
-let brand;
-console.log(brand);
-
-let arr = [1,0,3,4]
-arr.sort()
-arr.push("value")
-arr.unshift(false)
-console.log(typeof arr)
-console.log(arr)
+function logName(name="Enter your name"){
+    return(name);
+}
+console.log(logName())
