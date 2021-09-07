@@ -1,16 +1,17 @@
-// Data types
 
-// Primitive and Non primitive
+for(let i=1;i<=10;i++){
+    console.log(i);
+}
 
-let age = 7676376;
-let Name = 'asjjhfjhdf';
+const temp = () => {
+    var x = 5;
+}
 
-let brand;
-console.log(brand);
+// console.log(x);
 
-let arr = [1,0,3,4]
-arr.sort()
-arr.push("value")
-arr.unshift(false)
-console.log(typeof arr)
-console.log(arr)
+
+let i = 1;
+while(i<=10){
+    console.log(i);
+    i++;
+}
