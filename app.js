@@ -1,49 +1,57 @@
-console.log("MERGED CLASS 1 ES6");
+// ES6-Arrow-Functions
 
-var arr = [1,2,3,4];
-console.log(arr[2]);
-
-var [one, two, three, four, five] = arr; //ES6 Destructuring
-three = 5
-console.log(three+" "+arr[2]); // its not changing the actual value in the array so its favaurable to work upon the copy 
-console.log(five); // undefined because variable declared but nothing assigned
-
-// ES6 Destructuring application
-function getScores(){
-    return [90,100];
+let add = function(x,y){
+    return x+y;
 }
 
-const [x,y,z] = getScores(); // Here x y z are individual variables
+console.log(add(10, 20));
 
-console.log(x);
-console.log(y);
-console.log(z);
+let sum = (x,y) => x + y; // Here we dont require a return statement because of one single operation, if there are more operation we have to specify what to return
+console.log(sum(10, 20));
 
-//x = 10;   // error cannot change a const variable
-
-// Object Destructuring
-
-const obj = {
-    name: "Piyush Mitra",
-    email: "abc@email.com",
-    age: 20
+const counter = {
+    count: 1,
+    next: function() {
+        return ++(this.count); // this is refering to the present object which is executed but not the object in which "this" is written you can refer ti as parent object and here that is counter object
+    }
 }
 
-console.log(obj.email);
-let {dum, age, email, name1} = obj; // It identifies the keys and it will assign those key values to the variable other variable name will not match to the keys and it will not assign the value
-console.log(name1);
-console.log(age);
-console.log(dum);
+console.log(counter.next());
+console.log(counter.next());
+console.log(counter.next());
 
-let person = {
-    firstname: "Piyush",
-    lastname: "Mitra",
-    age1:20
+const counter2 = {
+    count: 1,
+    next: function() {
+        return ++(counter2.count);
+    }
 }
 
-let {middlename="No middle name", age1, lastname, firstname} = person;
-console.log(middlename);
-console.log(firstname);
-console.log(lastname);
-console.log(age1);
+console.log(counter2.next());
+console.log(counter2.next());
+console.log(counter2.next());
 
+let a = {
+    i : 1,
+    f: function(){
+        let i = 2;
+        b = {
+            i : 3,
+            f2: function(){
+                return this.i;
+            }
+        }
+        console.log(b.f2());
+    }
+}
+
+a.f();
+
+let d = {
+    e:function(){
+        return "hi";
+    },
+    // g:d.e() the function in an object is only defined after the initialisation has completed of the parent object so we cannot acces the function here
+}
+console.log(d.e());
+// in arrow function this is refering to the window object
