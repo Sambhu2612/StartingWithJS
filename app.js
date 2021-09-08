@@ -51,7 +51,20 @@ let d = {
     e:function(){
         return "hi";
     },
+    f:this
     // g:d.e() the function in an object is only defined after the initialisation has completed of the parent object so we cannot acces the function here
 }
-console.log(d.e());
+console.log(d.e()+" "+d.f);
 // in arrow function this is refering to the window object
+
+function createObject(){
+    this.n = "Piyush";
+    this.e = function(){
+        return this.n
+    }
+    this.c = this.e;
+    this.f = this;
+}
+
+let d1 = new createObject();
+console.log(d1.c()+" "+d1.f);    // object created in this particular way lets you acces the object's function within the function
