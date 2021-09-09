@@ -1,70 +1,31 @@
-// ES6-Arrow-Functions
+// ES6-Array-Method
 
-let add = function(x,y){
-    return x+y;
-}
+// map in array
+// map and foreach both can take functions as arguments but map returns a new array where as foreach doesn't
 
-console.log(add(10, 20));
+let rank = [1,2,3,4,5,6];
+const newArr = rank.map((e) => e + 1); // In place of map use foreach it will give you undefined
+console.log(newArr);
 
-let sum = (x,y) => x + y; // Here we dont require a return statement because of one single operation, if there are more operation we have to specify what to return
-console.log(sum(10, 20));
 
-const counter = {
-    count: 1,
-    next: function() {
-        return ++(this.count); // this is refering to the present object which is executed but not the object in which "this" is written you can refer ti as parent object and here that is counter object
-    }
-}
+// in map like foreach the first argument of the function formal parameters is passed the element and the second argument is passed with the index
 
-console.log(counter.next());
-console.log(counter.next());
-console.log(counter.next());
+rank.map((e, i) => {
+    console.log(`${e} at index ${i}`);
+});
 
-const counter2 = {
-    count: 1,
-    next: function() {
-        return ++(counter2.count);
-    }
-}
+// Application of mapping
 
-console.log(counter2.next());
-console.log(counter2.next());
-console.log(counter2.next());
+console.log(rank.map((e, i) => {
+    if(e%2===0)
+        return e;
+}));
 
-let a = {
-    i : 1,
-    f: function(){
-        let i = 2;
-        b = {
-            i : 3,
-            f2: function(){
-                return this.i;
-            }
-        }
-        console.log(b.f2());
-    }
-}
+// Filter,  it is a method which maps each element of an array and returns an array of those elements which obey the provided condition in the function parameter
 
-a.f();
+console.log(rank.filter((e, i) => {
+    if(e%2===0)
+        return e;
+})); // Prints only the defined elements 
 
-let d = {
-    e:function(){
-        return "hi";
-    },
-    f:this
-    // g:d.e() the function in an object is only defined after the initialisation has completed of the parent object so we cannot acces the function here
-}
-console.log(d.e()+" "+d.f);
-// in arrow function this is refering to the window object
 
-function createObject(){
-    this.n = "Piyush";
-    this.e = function(){
-        return this.n
-    }
-    this.c = this.e;
-    this.f = this;
-}
-
-let d1 = new createObject();
-console.log(d1.c()+" "+d1.f);    // object created in this particular way lets you acces the object's function within the function
