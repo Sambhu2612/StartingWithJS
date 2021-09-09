@@ -1,31 +1,29 @@
-// ES6-Array-Method
+// promises
+// promise is a javascript object
+// promise in javascript returns something in the future
+// It has three stages
+// 1.pending
+// 2.fullfilled 
+// 3.rejected
 
-// map in array
-// map and foreach both can take functions as arguments but map returns a new array where as foreach doesn't
 
-let rank = [1,2,3,4,5,6];
-const newArr = rank.map((e) => e + 1); // In place of map use foreach it will give you undefined
-console.log(newArr);
-
-
-// in map like foreach the first argument of the function formal parameters is passed the element and the second argument is passed with the index
-
-rank.map((e, i) => {
-    console.log(`${e} at index ${i}`);
+let concert = false;
+let attendConcert = new Promise(function(resolve, reject) { // This function is known as executer and to the executer two function as a parameter is passed first one is resolve and the second one is reject
+    setTimeout(() => {
+        if(concert){
+            resolve("BOB ATTENDED THE CONCERT");
+        }else{
+            reject("BOB FAILED TO ATTEND THE CONCERT");
+        }
+    }, 2000);
 });
+// console.log(attendConcert);
+// setTimeout(() => {
+//     console.log(attendConcert);
+// }, 3000);
 
-// Application of mapping
+attendConcert.then((data)=>console.log(data)); // then method waits till the fullfillment of the promise and in case of rejection it also prints the reject message
 
-console.log(rank.map((e, i) => {
-    if(e%2===0)
-        return e;
-}));
+attendConcert.catch((error)=>console.log(error)); // catch method catches any error which happens durig the pending stage of the promise and if the promise goes to the rejected stage then also it will produce an error , iff the promise is fullfilled then only no error occurs
 
-// Filter,  it is a method which maps each element of an array and returns an array of those elements which obey the provided condition in the function parameter
-
-console.log(rank.filter((e, i) => {
-    if(e%2===0)
-        return e;
-})); // Prints only the defined elements 
-
-
+// we can also look at catch as it catches every reason which didn't let promise to go to the fullfilment stage
