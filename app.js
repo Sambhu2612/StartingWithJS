@@ -25,5 +25,5 @@ let attendConcert = new Promise(function(resolve, reject) { // This function is 
 attendConcert.then((data)=>console.log(data)); // then method waits till the fullfillment of the promise and in case of rejection it also prints the reject message
 
 attendConcert.catch((error)=>console.log(error)); // catch method catches any error which happens durig the pending stage of the promise and if the promise goes to the rejected stage then also it will produce an error , iff the promise is fullfilled then only no error occurs
-
+// .then and .catch both are call back function
 // we can also look at catch as it catches every reason which didn't let promise to go to the fullfilment stage
